@@ -1,23 +1,23 @@
 
 	myapp.controller("listCtrl", ListController);
-        
-        function ListController($scope){
+        ListController.$inject = ["quizMetrics"];
+        function ListController(quizMetrics){
         	var vm=this;
-            
+			vm.quizMetrics = quizMetrics;
 			vm.data = turtleData;
 			vm.activeTurtle = {};
 			vm.changeActiveTurtle = changeActiveTurtle;
 			vm.search = "";
 			vm.quizActive=false;
-			vm.activateQuiz = activateQuiz;
-
+			
 			function changeActiveTurtle(index){
 				vm.activeTurtle = index;
 			}
 
 			function activateQuiz(){
-				vm.quizActive = true;
+				quizMetrics.changeState(true)
 			}
+			
         }
 
 

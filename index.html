@@ -17,7 +17,7 @@
                 <h1>Country Facts</h1>
                 <h3>Learn all about the country facts</h3>
             </div>
-            <div ng-controller="listCtrl as list" ng-hide="list.quizActive">
+            <div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive">
                 <form class="form-inline well well-sm clearfix">
                     <span class="glyphicon glyphicon-search"></span>
                     <input type="text" placeholder="search..."
@@ -81,7 +81,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- list controller -->
+                <div ng-controller="quizCtrl as quiz">
 
+                </div>
 
             </div>
                     
@@ -100,6 +103,8 @@
        <!-- activity scripts -->
         <script src="js/app.js"></script>
         <script src="js/controllers/list.js"></script>
+        <script src="js/controllers/quiz.js"></script>
+        <script src="js/factories/quizMetrics.js"></script>
         <!-- activity scripts -->
 
     </body>
